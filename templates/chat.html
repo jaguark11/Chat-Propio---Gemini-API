@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Citadel Chat</title>
+    <link rel="stylesheet" href="/static/chat.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Sesiones</h3>
+                <div>
+                    <button id="themeToggle" class="icon-btn" title="Alternar iluminación">☀️</button>
+                    <button id="btnNewSession" class="icon-btn" title="Nueva sesión">➕</button>
+                </div>
+            </div>
+            <div class="tabs">
+                <button id="tabActive" class="tab active">Activas</button>
+                <button id="tabArchived" class="tab">Archivo</button>
+            </div>
+            <div id="sessionList" class="session-list"></div>
+        </aside>
+        <main class="chat-container">
+            <header class="chat-header">
+                <h2 id="currentTitle" onclick="renameSession()" class="editable-title">Selecciona una sesión</h2>
+                <div class="actions">
+                    <button id="btnArchive" class="danger-btn hidden">📥 Archivar</button>
+                    <button id="btnDelete" class="danger-btn hidden">🗑️ Purgar</button>
+                </div>
+            </header>
+            <div class="chat-window" id="chatWindow"></div>
+            <div class="emoji-picker hidden" id="emojiPicker">
+                <span>⚡</span><span>☕</span><span>🧠</span><span>🔧</span><span>✅</span><span>🔥</span>
+            </div>
+            <section class="input-area hidden" id="inputSection">
+                <button id="emojiToggle" class="icon-btn">😀</button>
+                <textarea id="chatInput" placeholder="Dicta tus pensamientos..."></textarea>
+                <button id="recordBtn" class="icon-btn">🎙️</button>
+                <button id="sendBtn" class="primary-btn">Enviar</button>
+            </section>
+        </main>
+    </div>
+    <script src="/static/chat.js?v=final_absoluto"></script>
+</body>
+</html>
